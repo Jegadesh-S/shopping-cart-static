@@ -1,0 +1,11 @@
+export const DEFAULT_GLOBAL_SEARCH_CATEGORY = "All Categories";
+export const DEBOUNCE_SETINTERVAL = 3000;
+export const ADD_ITEM_TO_CART = "+";
+export const REDUCE_ITEM_COUNT_TO_CART = "-";
+
+export default {
+  DEFAULT_GLOBAL_SEARCH_CATEGORY,
+  DEBOUNCE_SETINTERVAL,
+  ADD_ITEM_TO_CART,
+  REDUCE_ITEM_COUNT_TO_CART,
+};

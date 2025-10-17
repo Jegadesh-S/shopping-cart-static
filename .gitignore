@@ -1,4 +1,4 @@
 node_modules
-package-lock.json
-test-coverage/
 dist
+test-coverage
+package-lock.json

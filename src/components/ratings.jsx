@@ -1,4 +1,5 @@
 import useRatings from "@customHooks/useRatings";
+import Star from "@/assets/images/star.svg";
 
 function Ratings({ rating, customerCount }) {
   const { computeWidthInPercentage } = useRatings(rating);
@@ -19,7 +20,7 @@ function Ratings({ rating, customerCount }) {
           {[1, 2, 3, 4, 5].map((index) => (
             <img
               key={`star_${index + 1}`}
-              src="../../src/assets/star.svg"
+              src={Star}
               width={"15px"}
               height={"15px"}
             ></img>

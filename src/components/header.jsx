@@ -2,6 +2,8 @@ import { Col, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import GloablSearchBox from "./globalSearch";
 import { useSelector } from "react-redux";
+import logoImage from "@/assets/images/EE.png";
+import cartImage from "@/assets/images/cart-icon.svg";
 
 function Header({ className }) {
   const cartCount = useSelector((store) => store.cart.cartItems.length);
@@ -14,7 +16,8 @@ function Header({ className }) {
       >
         <Col className="logo-container" sm={1}>
           <img
-            src="./../src/assets/EE.png"
+            src={logoImage}
+            // className="logo-image"
             width="40px"
             alt="Equal Expert shopping cart"
           />
@@ -26,7 +29,7 @@ function Header({ className }) {
           {/* <NavLink to="/products">Products</NavLink> */}
           <NavLink aria-disabled={cartCount == 0 ? true : false} to="/cart">
             <div className="d-flex">
-              <img src="../src/assets/cart-icon.svg"></img>({cartCount})
+              <img src={cartImage}></img>({cartCount})
             </div>
           </NavLink>
         </Col>

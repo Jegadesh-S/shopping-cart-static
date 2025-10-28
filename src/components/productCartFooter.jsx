@@ -4,6 +4,9 @@ import {
   ADD_ITEM_TO_CART,
   REDUCE_ITEM_COUNT_TO_CART,
 } from "../utils/constants";
+import TrashIcon from "@/assets/images/trash.svg";
+import MinusIcon from "@/assets/images/minus-product.png";
+import AddIcon from "@/assets/images/add-product.png";
 
 function ProductCartFooter({
   id,
@@ -30,7 +33,7 @@ function ProductCartFooter({
             {productCount == 1 && (
               <img
                 data-testid={`product-to-remove-${id}`}
-                src="../src/assets/trash.svg"
+                src={TrashIcon}
                 width={"25px"}
                 height={"25px"}
                 onClick={() => onRemovingItemFromCart(id)}
@@ -39,7 +42,7 @@ function ProductCartFooter({
             {productCount > 1 && (
               <img
                 data-testid={`product-${1}-count-decrease`}
-                src="../src/assets/minus-product.png"
+                src={MinusIcon}
                 width={"15px"}
                 height={"25px"}
                 onClick={() =>
@@ -50,7 +53,7 @@ function ProductCartFooter({
             <FormControl disabled value={productCount}></FormControl>
             <img
               data-testid={`product-${1}-count-increase`}
-              src="../src/assets/add-product.png"
+              src={AddIcon}
               width={"25px"}
               height={"25px"}
               onClick={() => onUpdatingCartItemQuantity(id, ADD_ITEM_TO_CART)}

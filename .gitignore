@@ -1,0 +1,5 @@
+node_modules
+dist
+test-coverage
+package-lock.json
+.git_backup
